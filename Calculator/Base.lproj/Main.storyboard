@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K7H-Nd-x3p">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--計算機アプリ-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a3-zH-OFi">
+                                <rect key="frame" x="30" y="424" width="354" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="計算">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W1u-a0-EHr"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KnU-aY-mP8">
+                                <rect key="frame" x="30" y="363" width="354" height="32"/>
+                                <segments>
+                                    <segment title="➕"/>
+                                    <segment title="➖"/>
+                                    <segment title="✖️"/>
+                                    <segment title="➗"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3WJ-Bq-afw">
+                                <rect key="frame" x="30" y="235" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xje-gi-1qw">
+                                <rect key="frame" x="30" y="299" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果は..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74u-PY-hoU">
+                                <rect key="frame" x="30" y="169" width="354" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3WJ-Bq-afw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="45H-EW-dQZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xje-gi-1qw" secondAttribute="trailing" constant="30" id="7C5-TD-Xlo"/>
+                            <constraint firstItem="74u-PY-hoU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="7S9-QD-IBE"/>
+                            <constraint firstItem="6a3-zH-OFi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BRg-jE-NIC"/>
+                            <constraint firstItem="6a3-zH-OFi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ClS-S4-zuV"/>
+                            <constraint firstItem="KnU-aY-mP8" firstAttribute="top" secondItem="Xje-gi-1qw" secondAttribute="bottom" constant="30" id="FRJ-St-dxh"/>
+                            <constraint firstItem="Xje-gi-1qw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="JhC-1B-PNp"/>
+                            <constraint firstItem="6a3-zH-OFi" firstAttribute="top" secondItem="KnU-aY-mP8" secondAttribute="bottom" constant="30" id="N3I-dd-Cqd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KnU-aY-mP8" secondAttribute="trailing" constant="30" id="WaJ-GM-HJB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3WJ-Bq-afw" secondAttribute="trailing" constant="30" id="ZIP-OV-yGL"/>
+                            <constraint firstItem="KnU-aY-mP8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="aZE-j4-ttH"/>
+                            <constraint firstItem="Xje-gi-1qw" firstAttribute="top" secondItem="3WJ-Bq-afw" secondAttribute="bottom" constant="30" id="hCe-FB-El1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="74u-PY-hoU" secondAttribute="trailing" constant="30" id="k5h-fI-BxG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6a3-zH-OFi" secondAttribute="trailing" constant="30" id="o9j-pq-NwX"/>
+                            <constraint firstItem="6a3-zH-OFi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qcY-Uv-rgA"/>
+                            <constraint firstItem="3WJ-Bq-afw" firstAttribute="top" secondItem="74u-PY-hoU" secondAttribute="bottom" constant="30" id="x9m-Ie-Cyt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="計算機アプリ" id="2NB-NB-Hr4"/>
+                    <connections>
+                        <outlet property="firstTextField" destination="3WJ-Bq-afw" id="4mH-o2-OVf"/>
+                        <outlet property="resultLabel" destination="74u-PY-hoU" id="jPo-mG-LPN"/>
+                        <outlet property="secondTextField" destination="Xje-gi-1qw" id="EHe-59-10B"/>
+                        <outlet property="segmentedControl" destination="KnU-aY-mP8" id="wYg-Kx-gcv"/>
+                        <segue destination="QYY-DC-Ohx" kind="show" identifier="ResultSegue" id="w34-u4-U86"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="ozS-be-FOT">
+            <objects>
+                <viewController id="QYY-DC-Ohx" customClass="ResultViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R6h-mf-HGb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果は..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkp-mO-wdM">
+                                <rect key="frame" x="93.5" y="412" width="227.5" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vkp-mO-wdM" firstAttribute="centerY" secondItem="R6h-mf-HGb" secondAttribute="centerY" id="1sO-By-iGr"/>
+                            <constraint firstItem="vkp-mO-wdM" firstAttribute="centerX" secondItem="R6h-mf-HGb" secondAttribute="centerX" id="AYZ-Ob-nMS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fav-e6-8OQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="agm-tX-DqH"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="vkp-mO-wdM" id="Ldy-S4-aXH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arA-IQ-Ilf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="118"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D5a-yc-BfM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K7H-Nd-x3p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UIN-vZ-A6V">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RcA-2L-e1e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhw-FQ-jCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
